@@ -16,9 +16,6 @@
     "type": "git",
     "url": "git+https://github.com/Kocherg1n/helyfly.git"
   },
-  "bugs": {
-    "url": "https://github.com/vedees/webpack-template-pug/issues"
-  },
   "keywords": [
     "webpack",
     "webpack4",
