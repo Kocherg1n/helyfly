@@ -1,0 +1,16 @@
+mixin image(path, className, description, attrRole)
+  if role
+    img(src=require(`../../assets/img/${path}`) class=className role= attrRole)
+  else
+    img(src=require(`../../assets/img/${path}`) class=className alt=description)
+
+
+mixin nav(className, items, href)
+  - var link = ["#single", "#slider", "#team", "#menu", "#reviews", "#video", "#map"];
+  nav(class=`${className}`)
+    ul(class=`${className}__list`)
+      each item, index in items
+        li(class=`${className}__item`)
+          a(href=`${link[index]}` class=`${className}__link`)= item
+
+
