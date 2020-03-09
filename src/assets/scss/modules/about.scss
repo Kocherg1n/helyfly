@@ -1,0 +1,38 @@
+.about {
+  background-image: url("/assets/img/about.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 840px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__content {
+
+  }
+
+  &__title {
+    color: $white;
+  }
+
+  &__title span {
+    color: $orange;
+  }
+
+  &__popup {
+    margin-top: rem(25);
+  }
+
+  &__controls {
+    margin-top: rem(30);
+    display: inline-block;
+  }
+
+  &__button {
+    font-weight: $boldFontWeight;
+    color: $white;
+    border: 3px solid $white;
+    width: rem(304);
+    height: rem(68);
+  }
+}

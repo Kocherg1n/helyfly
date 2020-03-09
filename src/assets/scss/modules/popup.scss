@@ -1,0 +1,57 @@
+.popup {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  width: rem(220);
+  height: rem(80);
+  background: $orange;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: 13px solid transparent;
+    width: 0;
+    height: 0;
+    border-top-color: $orange;
+    border-bottom-width: 0;
+    bottom: -13px;
+    right: rem(60);
+  }
+
+  &__text {
+    color: $white;
+  }
+
+  &__title {
+    font-size: rem(20);
+  }
+
+  &__price {
+    font-size: rem(35);
+    font-weight: $extraBoldFontWeight;
+  }
+
+  &__icon {
+    width: rem(60);
+    height: rem(60);
+    border: 1px solid $white;
+    border-radius: 50%;
+    margin-left: rem(7);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-percent {
+      position: absolute;
+      font-size: rem(35);
+      font-weight: $blackFontWeight;
+      color: $white;
+    }
+
+  }
+}

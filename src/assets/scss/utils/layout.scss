@@ -1,0 +1,163 @@
+html {
+  line-height: $mainLineHeight;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  height: 100%;
+
+  @include desktop {
+    font-size: 16px;
+  }
+  @include laptop {
+    font-size: 15px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
+  @include phone {
+    font-size: 13px;
+  }
+  @include phone-m {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+//
+//section, .section {
+//  position: relative;
+//}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.wrapper__content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.button {
+  background: transparent;
+  cursor: pointer;
+  font-family: $mainFont;
+  border-radius: 3px;
+  padding: 0;
+
+  &__inner {
+    margin-left: 7px;
+  }
+}
+
+.button-link {
+  font-size: 17px;
+  color: $blue;
+  position: relative;
+  width: 208px;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 6px;
+    background: url("/assets/img/icons/Arrow.png");
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin-right: rem(10);
+    transition: .2s;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 11px;
+    height: 6px;
+    background: url("/assets/img/icons/Arrow.png");
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    margin-left: rem(10);
+    transition: .2s;
+  }
+
+  &--active {
+    &:before {
+      transform: rotate(180deg);
+      transition: .2s;
+    }
+
+    &:after {
+      transform: rotate(180deg);
+      transition: .2s;
+    }
+  }
+}
+
+.title {
+  font-size: rem(40);
+  color: $black;
+  font-weight: $boldFontWeight;
+
+  &--color {
+    &--white {
+      color: $white;
+    }
+  }
+
+  &--size {
+    &--subtitle {
+      font-size: 18px;
+      font-weight: $boldFontWeight;
+      @include phone {
+        font-weight: $mainFontWeight;
+        font-size: 28px;
+
+        &--second {
+          font-size: 22px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

@@ -6,9 +6,21 @@ html(lang='ru')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible', content='ie=edge')
-    title helyfly
-
+    title Helyfly
+    script(src='https://api-maps.yandex.ru/2.1/?apikey=d5c84dde-9ee7-45b4-93a9-13e5547215e2&lang=ru_RU', type='text/javascript')
   body
     .wrapper
       .wrapper__content
-        h1 TITLE
+        include ../includes/modules/header
+        main.main-content
+          include ../includes/modules/about
+          include ../includes/modules/service
+          include ../includes/modules/gallery
+          include ../includes/modules/description
+          include ../includes/modules/schedule
+          include ../includes/modules/map
+          include ../includes/modules/reviews
+          include ../includes/modules/footer
+
+
+

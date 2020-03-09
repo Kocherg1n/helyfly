@@ -1,0 +1,31 @@
+section.service
+	.container
+		//h2.title.service__title.title--color--black Фотосессия #[br] в вертолете
+		.service__content
+			.service__column
+				.service__description
+					h2.title.service__title.title--color--black Фотосессия #[br] в вертолете
+					p.service__text Полет на вертолете это прекрасная возможность получить новые ощущения! А наш замечательный фотограф запечатлит лучшие моменты
+					ul.service__features-list
+						li.service__features-item
+							svg.service__features-icon
+									use(xlink:href='/assets/img/icons/clock.svg#clock')
+							.service__features-text 3 часа съемки
+						li.service__features-item
+							svg.service__features-icon
+								use(xlink:href='/assets/img/icons/camera.svg#camera')
+							.service__features-text Более 50 фотографий
+						li.service__features-item
+							svg.service__features-icon
+								use(xlink:href='/assets/img/icons/Group.svg#group')
+							.service__features-text Москва
+						li.service__features-item
+							svg.service__features-icon
+								use(xlink:href='/assets/img/icons/speech-bubble.svg#speech')
+							.service__features-text Готовы ответить на любые вопросы
+						.service__raiting
+							include /raiting
+			.service__column
+				.service__video
+					include /player
+

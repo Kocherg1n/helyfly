@@ -1,0 +1,103 @@
+.service {
+  padding-top: rem(40);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__column {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+    @include tablet {
+      width: 100%;
+      margin-bottom: rem(30);
+    }
+  }
+
+  &__description {
+    padding-right: rem(30);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet {
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+
+    @include tablet {
+      text-align: center;
+      padding: 0 0 rem(20) 0;
+    }
+
+    @include phone-m {
+      text-align: center;
+      padding: 0 20% 0 20%;
+      margin-bottom: rem(10);
+    }
+  }
+
+  &__text {
+    margin-top: rem(10);
+  }
+
+  &__features-list {
+    margin-top: rem(20);
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: $border-light;
+      position: absolute;
+      bottom: 60px;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: $border-light;
+      position: absolute;
+      bottom: -5px;
+    }
+  }
+
+  &__features-item {
+    display: flex;
+    margin-top: rem(10);
+    align-items: center;
+  }
+
+  &__features-icon {
+    width: 40px;
+    height: 37px;
+  }
+
+  &__features-text {
+    font-size: 14px;
+    margin-left: rem(15);
+  }
+
+  &__video {
+
+    @include tablet {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

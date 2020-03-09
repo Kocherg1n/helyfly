@@ -1,0 +1,15 @@
+.schedule {
+  padding-top: rem(40);
+
+  &__content {
+
+  }
+
+  &__title {
+
+    @include phone {
+      text-align: center;
+    }
+  }
+}
+

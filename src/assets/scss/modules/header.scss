@@ -1,0 +1,60 @@
+.header {
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: rem(100);
+
+    @include phone-m {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  &__logo {
+    margin-right: rem(36);
+    font-size: rem(28);
+
+    @include phone-m {
+      margin-right: 0;
+      font-size: rem(23);
+
+    }
+  }
+
+  &__city {
+    display: none;
+
+    @include phone-m {
+      display: block;
+    }
+  }
+
+  &__contacts {
+
+    @include phone-m {
+      display: none;
+    }
+  }
+
+  &__phone {
+    color: $black;
+    font-size: 14px;
+
+
+    & span {
+      color: $gray;
+      font-size: 14px;
+    }
+  }
+
+  &__menu {
+    display: none;
+
+    @include phone-m {
+      display: block;
+    }
+  }
+}
+

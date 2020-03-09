@@ -1,0 +1,35 @@
+.raiting {
+  display: flex;
+  position: relative;
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  margin-top: 20px;
+  align-items: center;
+
+  &__box {
+    display: flex;
+
+    @include phone {
+      display: block;
+    }
+  }
+
+  &__icon-pic {
+    margin-right: rem(10);
+    width: 32px;
+    height: 36px;
+  }
+
+  &__text {
+    margin-right: rem(10);
+
+    @include phone-m {
+      margin-right: 0;
+    }
+  }
+
+  &__stars {
+    display: flex;
+    align-items: center;
+  }
+}

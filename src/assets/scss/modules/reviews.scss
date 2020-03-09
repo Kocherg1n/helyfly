@@ -1,0 +1,153 @@
+.reviews {
+  padding-top: rem(80);
+
+  &__content {
+
+  }
+
+  &__title {
+
+    @include phone {
+      text-align: center;
+    }
+
+    &:after {
+      content: ":";
+      display: inline-block;
+
+      @include phone {
+        content: "";
+      }
+    }
+  }
+
+  &__list {
+    width: 50%;
+
+    @include laptop {
+      width: 70%;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    margin-top: rem(65);
+    display: flex;
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__avatar {
+    min-width: 100px;
+  }
+
+  &__desc {
+    margin-left: rem(20);
+    position: relative;
+
+    @include phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      margin-top: rem(10);
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $border-light;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__pic {
+
+  }
+
+  &__name {
+    font-weight: 500;
+    padding-bottom: 10px;
+  }
+
+  &__position {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 26px;
+
+    @include phone {
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+
+    @include phone-m {
+      flex-direction: column;
+    }
+  }
+
+  &__rating-star {
+    margin-right: rem(45);
+
+    @include phone {
+      margin-right: 0;
+    }
+  }
+
+  &__rating-title {
+    position: relative;
+    font-size: 14px;
+    color: $light-gray;
+
+    @include phone {
+      margin-left: 20px;
+      margin-top: 13px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 17px;
+      height: 14px;
+      background: url("/assets/img/icons/ok.png");
+      top: 40%;
+      transform: translateY(-50%);
+      left: -20px;
+    }
+  }
+
+  &__text {
+    padding-bottom: 26px;
+
+    @include phone {
+      text-align: center;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: $light-gray;
+    padding-bottom: rem(35);
+  }
+
+  &__control {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(40);
+  }
+}

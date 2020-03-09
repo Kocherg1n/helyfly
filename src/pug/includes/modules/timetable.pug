@@ -1,0 +1,23 @@
+.timetable
+	.timetable__row
+		.timetable__date Пятница, 14 сентября
+		.timetable__icon
+			button.button
+				svg.timetable__icon
+					use(xlink:href='/assets/img/icons/Calendar.svg#calendar')
+	.timetable__row
+		.timetable__sub-row
+			.timetable__time 15:00 - 18:00
+			.timetable__price 1500Р
+			.timetable__place Осталось — 1 место
+		.timetable__controls
+			button.button.timetable__button(type="button") Выбрать
+	.timetable__row
+		.timetable__sub-row
+			.timetable__time 19:00 - 22:00
+			.timetable__price 1500Р
+			.timetable__place Осталось — 1 место
+		.timetable__controls
+			button.button.timetable__button(type="button") Выбрать
+	.timetable__row
+		include /raiting

@@ -1,0 +1,80 @@
+.footer {
+  margin-top: rem(40);
+
+  &__over {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 77px;
+  }
+
+  &__logo {
+    font-size: rem(28);
+  }
+
+  &__box {
+    display: flex;
+  }
+
+  &__socials {
+
+  }
+
+  &__lang {
+    position: relative;
+    margin-left: 30px;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 11px;
+      height: 6px;
+      background: url("/assets/img/icons/Arrow.png");
+      margin-left: 5px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @include phone {
+      display: none;
+    }
+
+  }
+
+  &__lower {
+    background-color: #FAF9F8;
+    min-height: rem(87);
+    position: relative;
+    height: 100%;
+  }
+
+  &__icon-payment {
+    width: 26px;
+    height: 25px;
+    margin-right: rem(10);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__info {
+    //text-align: center;
+  }
+
+  &__contacts {
+    text-decoration: none;
+    color: $light-gray;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    color: $light-gray;
+  }
+}
+

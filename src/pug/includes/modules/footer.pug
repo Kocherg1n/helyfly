@@ -1,3 +1,18 @@
-footer
+footer.footer
   .container
-    span footer is here
+    .footer__over
+      .footer__logo HELYFLY
+      .footer__box
+        .footer__socials
+          include /socials
+        button.button.footer__lang RU
+  .footer__lower
+    .container
+      .footer__payment
+        svg.footer__icon-payment
+          use(xlink:href='/assets/img/icons/mc.svg#mc')
+        svg.footer__icon-payment
+          use(xlink:href='/assets/img/icons/visa.svg#visa')
+      .footer__info
+        a.footer__contacts(href="tel: 8(800)700-00-00") Тех. поддержка: 8(800)700-00-00
+        .footer__copyright © 2018 HELYFLY. All Rights Reserved.
