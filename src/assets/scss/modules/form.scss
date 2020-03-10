@@ -1,0 +1,161 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+
+  &--open {
+    display:flex;
+  }
+}
+
+.overlay__box {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 615px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.overlay__close {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+}
+
+.form {
+  width: 100%;
+  padding: 10%;
+
+  &__title {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 31px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+
+    &::after {
+      content: '*';
+      color: red;
+    }
+  }
+
+  &__input {
+    border: 1px solid $border-base;
+    border-radius: 3px;
+    padding: 13px 20px;
+    margin-bottom: 10px;
+  }
+
+  &__date::-webkit-calendar-picker-indicator {
+    color: transparent;
+    opacity: 1;
+    width: 27px;
+    height: 27px;
+    border: 1px solid $border-base;
+    border-radius: 3px;
+    background-image: url('/assets/img/icons/calendar.svg#calendar');
+    background-size: 18px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__card {
+    border: 1px solid $border-base;
+    border-radius: 3px;
+    margin-bottom: 34px;
+
+    &-cvv {
+      padding: 15px 20px;
+    }
+
+    &-number {
+      border-bottom: 1px solid $border-base;
+    }
+
+    &-validity {
+      border-right: 1px solid $border-base;
+    }
+  }
+
+  &__card-number,
+  &__card-validity,
+  &__card-cvv {
+    border-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+
+  &__card-validity,
+  &__card-cvv {
+    width: 50%;
+    display: inline-block;
+    margin-right: -4px;
+  }
+
+  &__checkbox {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 50px;
+    margin-bottom: 23px;
+
+    &-input {
+      display: none;
+    }
+
+    &-label {
+
+      &::after {
+        content: '';
+        display: block;
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $orange;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__button {
+    display: block;
+    font-style: normal;
+    font-weight: $boldFontWeight;
+    color: $white;
+    background: $orange;
+    border-radius: 3px;
+    padding: 27px 120px;
+    margin: 0 auto;
+
+    @include phone {
+      padding: 27px 80px;
+    }
+  }
+}
+
+.form__checkbox-input:checked + .form__checkbox-label::after {
+  box-shadow: 0 0 3px rgba(252, 155, 9, 0.6);
+  background-image: url('/assets/img/icons/tick.svg#tick');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+
+
+

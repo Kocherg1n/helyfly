@@ -35,8 +35,13 @@
     margin-top: rem(15);
   }
 
-  &__text-main {
+  &__text-pre-main {
     margin-top: rem(20);
+  }
+
+  &__text-main-second,
+  &__text-main-first {
+  display: none;
   }
 
   &__button {

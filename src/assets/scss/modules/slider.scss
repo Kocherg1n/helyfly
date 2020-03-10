@@ -1,0 +1,40 @@
+.slider {
+  position: relative;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0;
+  z-index: 30;
+  width: 30px;
+  height: 30px;
+}
+
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background: url("/assets/img/icons/arrow-prev.svg#prev") 0 0 / 100% no-repeat;
+
+  @include phone-m {
+    left: -10px;
+  }
+}
+
+.slider .slick-arrow.slick-next {
+  right: 0;
+  background: url("/assets/img/icons/arrow-next.svg#next") 0 0 / 100% no-repeat;
+
+  @include phone-m {
+    right: -10px;
+  }
+}
+
+.slick-list {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slick-track {
+  display: flex;
+}

@@ -48,6 +48,11 @@ ul, li {
   padding: 0;
   list-style-type: none;
 }
+
+input {
+  width: 100%;
+}
+
 //
 //section, .section {
 //  position: relative;
@@ -71,6 +76,10 @@ ul, li {
   margin: 0 auto;
   max-width: 1140px;
 }
+//
+//.main__content {
+//  position: relative;
+//}
 
 .button {
   background: transparent;

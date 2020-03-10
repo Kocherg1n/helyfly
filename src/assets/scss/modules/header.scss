@@ -19,7 +19,6 @@
     @include phone-m {
       margin-right: 0;
       font-size: rem(23);
-
     }
   }
 
@@ -41,7 +40,6 @@
   &__phone {
     color: $black;
     font-size: 14px;
-
 
     & span {
       color: $gray;

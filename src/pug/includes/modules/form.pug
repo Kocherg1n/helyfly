@@ -1,0 +1,33 @@
+.overlay
+	.overlay__box
+		button.button.overlay__close(type="button")
+			svg.footer__icon-payment
+				use(xlink:href='/assets/img/icons/close.svg#close')
+		.overlay__form
+			form.form#form(method='POST')
+				h2.form__title.title--size--subtitle Бронирование
+				label.form__label
+					.form__name Дата
+					input.form__input.form__date(type='date', name='date', required='')
+				label.form__label
+					.form__name Email
+					input.form__input.form__email(type='email', placeholder='Электронная почта', name='email', required='')
+				label.form__label
+					.form__name Имя
+					input.form__input.form__name(type='text', name='name', required='')
+				label.form__label
+					.form__name Фамилия
+					input.form__input.form__surname(type='text', name='surname', required='')
+				label.form__label
+					.form__name Телефон
+					input.form__input.form__phone#phone(type='tel', name='phone', required='')
+				label.form__label
+					.form__name Данные карты
+					.form__card
+						input.form__input.form__card-number(placeholder='Номер карты', name='card_number', required='')
+						input.form__input.form__card-validity(type='month', placeholder='Срок действия', name='card_validity', required='')
+						input.form__input.form__card-cvv(placeholder='CVV', name='card_cvv', required='')
+				.form__checkbox
+					input#checkbox.form__checkbox-input(type='checkbox', name='checkbox')
+					label.form__checkbox-label(for='checkbox') Я согласен с пользовательским соглашением и публичной офертой
+				button.form__button(type='submit') Забронировать
