@@ -17,10 +17,6 @@
     display: flex;
   }
 
-  &__socials {
-
-  }
-
   &__lang {
     position: relative;
     margin-left: 30px;
@@ -40,7 +36,6 @@
     @include phone {
       display: none;
     }
-
   }
 
   &__lower {
@@ -58,10 +53,6 @@
     &:last-child {
       margin-right: 0;
     }
-  }
-
-  &__info {
-    //text-align: center;
   }
 
   &__contacts {

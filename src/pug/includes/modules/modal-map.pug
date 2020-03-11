@@ -1,24 +1,25 @@
-.modal-map
-	ul.modal-map__list
-		li.modal-map__item
-			.modal-map__icon 1
-			.modal-map__desc
-				.modal-map__title Где встречаемся?
-				.modal-map__text Москва
-		li.modal-map__item
-			.modal-map__icon 2
-			.modal-map__desc
-				.modal-map__title Где встречаемся?
-				.modal-map__text Москва
-		li.modal-map__item
-			.modal-map__icon 3
-			.modal-map__desc
-				.modal-map__title Где встречаемся?
-				.modal-map__text Москва
-		li.modal-map__item
-			.modal-map__icon-user
-				+image('reviews/reviews4.png', 'modal-map__icon-user', 'Аватар фотографа', '')
-			.modal-map__desc
-				.modal-map__user-name Марина Иванова
-				.modal-map__user-position Фотограф
-				button.button.modal-map__user-button(type="button") Показать больше информации
+.modal-map__container
+	.modal-map
+		ul.modal-map__list
+			li.modal-map__item
+				.modal-map__icon 1
+				.modal-map__desc
+					.modal-map__title Где встречаемся?
+					.modal-map__text Москва
+			li.modal-map__item
+				.modal-map__icon 2
+				.modal-map__desc
+					.modal-map__title Где встречаемся?
+					.modal-map__text Москва
+			li.modal-map__item
+				.modal-map__icon 3
+				.modal-map__desc
+					.modal-map__title Где встречаемся?
+					.modal-map__text Москва
+			li.modal-map__item.modal-map__item--slider
+				.modal-map__icon-user
+					+image('reviews/reviews4.png', 'modal-map__icon-user', 'Аватар фотографа', '')
+				.modal-map__desc
+					.modal-map__user-name Марина Иванова
+					.modal-map__user-position Фотограф
+					button.button.modal-map__user-button(type="button") Показать больше информации

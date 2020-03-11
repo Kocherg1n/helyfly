@@ -5,9 +5,8 @@
 @import "utils/fonts";
 @import "utils/reset";
 @import "utils/media";
-
-//Layout
 @import "utils/layout";
+
 
 //Modules
 @import "modules/header";
@@ -21,13 +20,13 @@
 @import "modules/schedule";
 @import "modules/timetable";
 @import "modules/map";
-@import "modules/modal-map";
 @import "modules/reviews";
 @import "modules/footer";
 @import "modules/socials";
 @import "modules/player";
 @import "modules/slider";
 @import "modules/form";
+@import "modules/modal-map";
 
 
 

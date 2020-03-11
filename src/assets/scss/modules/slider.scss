@@ -1,40 +1,133 @@
+// slider-gallary setting
+
 .slider {
   position: relative;
-}
 
-.slider .slick-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 0;
-  z-index: 30;
-  width: 30px;
-  height: 30px;
-}
+  & .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    z-index: 30;
+    width: 60px;
+    height: 60px;
+    fill: white;
+  }
 
-.slider .slick-arrow.slick-prev {
-  left: 0;
-  background: url("/assets/img/icons/arrow-prev.svg#prev") 0 0 / 100% no-repeat;
+  & .slick-arrow.slick-prev {
+    left: 0;
+    background: url("/assets/img/icons/arrow-prev.svg#prev") 0 0 / 100% no-repeat;
 
-  @include phone-m {
-    left: -10px;
+    @include phone-m {
+      left: -10px;
+    }
+  }
+
+  & .slick-arrow.slick-next {
+    right: 0;
+    background: url("/assets/img/icons/arrow-next.svg#next") 0 0 / 100% no-repeat;
+
+    @include phone-m {
+      right: -10px;
+    }
+  }
+
+  & .slick-list {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  & .slick-track {
+    display: flex;
+  }
+
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & li {
+      margin-right: 5px;
+
+      &.slick-active button {
+        background-color: red;
+      }
+    }
+
+    & button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $black;
+    }
   }
 }
 
-.slider .slick-arrow.slick-next {
-  right: 0;
-  background: url("/assets/img/icons/arrow-next.svg#next") 0 0 / 100% no-repeat;
 
-  @include phone-m {
-    right: -10px;
+
+// slider-map setting
+
+.slider-map {
+  position: relative;
+
+  & .slick-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0;
+    z-index: 30;
+    width: 30px;
+    height: 30px;
   }
-}
 
-.slick-list {
-  overflow: hidden;
-  width: 100%;
-}
+  & .slick-arrow.slick-prev {
+    left: 0;
+    background: url("/assets/img/icons/arrow-prev.svg#prev") 0 0 / 100% no-repeat;
 
-.slick-track {
-  display: flex;
+    @include phone-m {
+      left: -10px;
+    }
+  }
+
+  & .slick-arrow.slick-next {
+    right: 0;
+    background: url("/assets/img/icons/arrow-next.svg#next") 0 0 / 100% no-repeat;
+
+    @include phone-m {
+      right: -10px;
+    }
+  }
+
+  & .slick-list {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  & .slick-track {
+    display: flex;
+  }
+
+  & .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & li {
+      margin-right: 5px;
+
+      &.slick-active button {
+        background-color: $orange;
+        border: 1px solid transparent;
+      }
+    }
+
+    & button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 1px solid $gray;
+    }
+  }
 }

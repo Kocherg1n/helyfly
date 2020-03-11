@@ -9,9 +9,3 @@ import './assets/scss/main.scss'
 
 
 
-
-//es6
-
-
-
-

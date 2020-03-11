@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .9);
   display: none;
   justify-content: center;
   align-items: center;
@@ -12,18 +12,27 @@
 
   &--open {
     display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 3%;
+
+    @include phone {
+      padding-top: 40%;
+      align-items: flex-start;
+    }
   }
 }
 
 .overlay__box {
+  font-size: $mainFontSize;
   position: relative;
   display: block;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   min-width: 320px;
-  max-width: 615px;
-  background-color: #fff;
+  max-width: rem(620);
+  background-color: $white;
   border-radius: 6px;
 }
 
@@ -35,16 +44,16 @@
 
 .form {
   width: 100%;
-  padding: 10%;
+  padding: 15%;
 
   &__title {
-    font-size: 22px;
+    font-size: rem(22);
     text-align: center;
-    margin-bottom: 31px;
+    margin-bottom: rem(20);
   }
 
   &__name {
-    margin-bottom: 10px;
+    margin-bottom: rem(10);
 
     &::after {
       content: '*';
@@ -55,19 +64,18 @@
   &__input {
     border: 1px solid $border-base;
     border-radius: 3px;
-    padding: 13px 20px;
+    padding: 13px 13px; // fix
     margin-bottom: 10px;
   }
 
   &__date::-webkit-calendar-picker-indicator {
     color: transparent;
     opacity: 1;
-    width: 27px;
-    height: 27px;
+    width: 23px;
+    height: 23px;
     border: 1px solid $border-base;
     border-radius: 3px;
     background-image: url('/assets/img/icons/calendar.svg#calendar');
-    background-size: 18px;
     background-position: center center;
     background-repeat: no-repeat;
   }
@@ -75,18 +83,29 @@
   &__card {
     border: 1px solid $border-base;
     border-radius: 3px;
-    margin-bottom: 34px;
+    margin-bottom: rem(20);
 
     &-cvv {
       padding: 15px 20px;
+      padding-bottom: 17px;
+
+      @include phone {
+        display: block;
+        width: 100%;
+      }
     }
 
     &-number {
-      border-bottom: 1px solid $border-base;
+      border-bottom: 3px solid $border-base;
     }
 
     &-validity {
       border-right: 1px solid $border-base;
+
+      @include phone {
+        display: block;
+        width: 100%;
+      }
     }
   }
 
@@ -102,7 +121,7 @@
   &__card-cvv {
     width: 50%;
     display: inline-block;
-    margin-right: -4px;
+    border-top: 1px solid $border-base;
   }
 
   &__checkbox {
@@ -110,6 +129,10 @@
     padding-left: 25px;
     padding-right: 50px;
     margin-bottom: 23px;
+
+    @include phone {
+      padding: 0 0 0 25px;
+    }
 
     &-input {
       display: none;
@@ -138,11 +161,12 @@
     color: $white;
     background: $orange;
     border-radius: 3px;
-    padding: 27px 120px;
+    padding: rem(25) rem(100);
     margin: 0 auto;
 
     @include phone {
-      padding: 27px 80px;
+      padding: rem(25);
+      width: 100%;
     }
   }
 }

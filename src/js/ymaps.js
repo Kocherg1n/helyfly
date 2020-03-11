@@ -6,4 +6,12 @@ function init() {
         zoom: 13,
         controls: []
     });
+
+    var myPlacemark = new ymaps.Placemark([55.77, 37.65], {
+        balloonContentHeader: 'Встречаемся тут!'
+    }, {
+        preset: 'islands#redIcon',
+    });
+
+    myMap.geoObjects.add(myPlacemark);
 }
